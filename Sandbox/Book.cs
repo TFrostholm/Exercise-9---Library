@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-namespace Library
+namespace Sandbox
 {
     public class Book
     {
@@ -58,8 +58,16 @@ namespace Library
         // 
         public void BorrowFromLibrary()
         {
-            _bookIsLoanedOut = true;
+            if (_bookIsLoanedOut == true)
+            {
+                Console.WriteLine("Book is already loaned out");
+            }
+            else
+            {
+                _bookIsLoanedOut = true;
             _noOfLoans++; // Step 3c 
+            }
+            
         }
         public void ReturnToLibrary()
         {

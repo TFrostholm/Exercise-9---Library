@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Sandbox;
+
 namespace Library
 {
     public class InsertCodeHere
@@ -31,6 +33,15 @@ namespace Library
 
             // finally print out information with how many times the student borrow the book in a given period of time 
             aBook.PrintInformation();
+
+            Book myBook = new Book("CIR120", "Catcher in the rye", "J.D. Salinger", 29.99);
+            myBook.PrintInformation();
+
+            myBook.BorrowFromLibrary();
+            myBook.PrintInformation();
+
+            // Trying to borrow the same book to test isLoanedOut conditional statements
+            myBook.BorrowFromLibrary();
 
             // The LAST line of code should be ABOVE this line 
         }
